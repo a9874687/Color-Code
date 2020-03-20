@@ -458,6 +458,19 @@ table {
           transform: scale(1.2);
 }
 
+#banner2 {
+  max-width: 1140px;
+  height: 250px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-image: url("../img/banner2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
 #store {
   background-color: #fff;
 }

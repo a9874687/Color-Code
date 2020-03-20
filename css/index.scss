@@ -321,6 +321,20 @@ $font-p:16px;
         // }
     }
 }
+#banner2{
+    max-width: 1140px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-image: url("../img/banner2.jpg");
+    @include bgc-cover();
+    img{
+        // width: 100%;
+        // height: 350px;
+       
+    }
+}
 //--------------------------門市據點--------------------------//
 #store{
     background-color: #fff;
