@@ -1,4 +1,8 @@
 $( document ).ready(function() {
+//--------------------------手機選單--------------------------//
+  $(".menushow").click(function(){
+    $("#header .container ul").fadeToggle("slow");
+  })  //打開選單
     //--------------------------輪播--------------------------//
     $('.product-card').slick({
         centerMode: true,
@@ -31,8 +35,8 @@ $( document ).ready(function() {
     console.log(img[0]);
     let boundingBox = img[0].getBoundingClientRect();
     console.log(boundingBox);
-    let centerX = boundingBox.left + boundingBox.width / 2;
-    let centerY = boundingBox.top + boundingBox.height / 2;
+    let centerX = boundingBox.left + boundingBox.width / 1;
+    let centerY = boundingBox.top + boundingBox.height / 1;
     $("#cookie-card .container ul").mousemove(function (e) {
         // console.log(e);
         let { pageX, pageY } = e;

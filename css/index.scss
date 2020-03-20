@@ -29,6 +29,9 @@ $font-p:16px;
     position: fixed;
     width: 100%;
     z-index: 100;
+    @include mobile767(){
+        line-height: 0px;
+    }
     .container{
         display: flex;
         justify-content: space-between;
@@ -40,11 +43,20 @@ $font-p:16px;
                 margin-top: 20px;
                 img{
                     width: 100%;
+                    @include pad(){
+                        width: 70%;
+                    }
+                    @include mobile767(){
+                        width: 50%;
+                    }
                 }
             }
         }
         ul{
             display: flex;
+            @include mobile767(){
+                display: none;
+            }
             li{
                 a{
                     display: block;
@@ -57,6 +69,26 @@ $font-p:16px;
                     &:hover{
                         color: rgb(235, 187, 56);
                     }
+                    @include pad(){
+                        padding-right: 20px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .menushow{
+            display: none;
+            @include mobile767(){
+                right: 0;
+                display: block;
+                margin-right: 20px;
+                line-height: 100px;
+            }
+            a{
+                text-decoration: none;
+                @include mobile767(){
+                    font-size: $font-m;
+                    color: black;
                 }
             }
         }
@@ -114,13 +146,28 @@ $font-p:16px;
         max-width: 1140px;
         margin:0 auto;
         margin-top: 40px;
+        @include mobile767(){
+            flex-direction: column;
+        }
         .about-pic{
             width: 100%;
-            
             img{
                 position: absolute;
                 top:-10%;
                 width: 25%;
+                @include desktop(){
+                    width: 45%;
+                    padding-left: 20px;
+                }
+                @include pad(){
+                    width: 41%;
+                    padding-left: 10px;
+                }
+                @include mobile767(){
+                    position: static;
+                    padding-top: 20px;
+                    width: 100%;
+                }
             }
         }
         .about-artical{
@@ -168,10 +215,34 @@ $font-p:16px;
             margin-top: 5%;
             background-color: #FFF;
             border:1px solid rgb(235, 187, 56);
-            border-radius: 50px;
+            border-radius: 10px;
             width: 10%;
             line-height: 50px;
             text-align: center;
+            @include desktop_top(){
+                width: 15%;
+                line-height: 40px;
+            }
+            @include pad(){
+                width: 15%;
+                line-height: 40px;
+            }
+            @include mobile767(){
+                width: 20%;
+                line-height: 40px;
+            }
+            @include mobile480(){
+                width: 28%;
+                line-height: 35px;
+            }
+            @include mobile360(){
+                width: 30%;
+                line-height: 33px;
+            }
+            @include iphone5(){
+                width: 40%;
+                line-height: 33px;
+            }
             span{
                 a{
                     display: block;
@@ -179,7 +250,7 @@ $font-p:16px;
                     text-decoration: none;
                     &:hover{
                         background-color: rgb(250, 197, 52);
-                        border-radius: 50px;
+                        border-radius: 10px;
                     }
                 }
             }
@@ -221,27 +292,30 @@ $font-p:16px;
                 }
             }
         }
-        .more-btn{
-            margin-top: 2%;
-            margin-bottom: 2%;
-            background-color: #FFF;
-            border:1px solid rgb(235, 187, 56);
-            border-radius: 50px;
-            width: 10%;
-            line-height: 50px;
-            text-align: center;
-            span{
-                a{
-                    display: block;
-                    color: black;
-                    text-decoration: none;
-                    &:hover{
-                        background-color: rgb(250, 197, 52);
-                        border-radius: 50px;
-                    }
-                }
-            }
-        }
+        // .more-btn{
+        //     margin-top: 2%;
+        //     margin-bottom: 2%;
+        //     background-color: #FFF;
+        //     border:1px solid rgb(235, 187, 56);
+        //     border-radius: 18px;
+        //     width: 10%;
+        //     line-height: 40px;
+        //     text-align: center;
+        //     @include mobile767(){
+        //         width: 45%;
+        //     }
+        //     span{
+        //         a{
+        //             display: block;
+        //             color: black;
+        //             text-decoration: none;
+        //             &:hover{
+        //                 background-color: rgb(250, 197, 52);
+        //                 border-radius: 50px;
+        //             }
+        //         }
+        //     }
+        // }
     }
 }
 //--------------------------門市據點--------------------------//
@@ -262,11 +336,20 @@ $font-p:16px;
         }
         section{
             display: flex;
+            @include desktop(){
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+            @include mobile767(){
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
             .card{
                margin: 15px;
                img{
                    width: 100%;
-                   height: 50%;
+                   height: 230px;
                }
             }
             .card-text{
@@ -304,6 +387,10 @@ $font-p:16px;
                         color: black;
                         font-size: $font-s;
                         font-family: 'Noto Sans TC', sans-serif;
+                        @include mobile767(){
+                            font-size: 12px;
+                            white-space: nowrap;
+                        }
                     }
                 }
             }
@@ -322,6 +409,10 @@ $font-p:16px;
                         color: black;
                         font-size: $font-s;
                         font-family: 'Noto Sans TC', sans-serif;
+                        @include mobile767(){
+                            font-size: 12px;
+                            white-space: nowrap;
+                        }
                     }
                 }
             }
