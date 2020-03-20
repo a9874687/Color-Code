@@ -172,6 +172,12 @@ table {
   width: 100%;
 }
 
+@media (max-width: 767px) {
+  #banner img {
+    padding-top: 27%;
+  }
+}
+
 #product-p .container {
   display: -webkit-box;
   display: -ms-flexbox;
