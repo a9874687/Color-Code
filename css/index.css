@@ -322,9 +322,22 @@ table {
   display: flex;
 }
 
+@media (max-width: 767px) {
+  #cookie-card .container ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 #cookie-card .container ul li {
   width: 20%;
   padding: 2%;
+}
+
+@media (max-width: 767px) {
+  #cookie-card .container ul li {
+    width: 50%;
+  }
 }
 
 #cookie-card .container ul li a {
@@ -442,9 +455,24 @@ table {
   display: flex;
 }
 
+@media (max-width: 767px) {
+  #news .container ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #news .container ul li {
   width: 33.333%;
   padding: 2%;
+}
+
+@media (max-width: 767px) {
+  #news .container ul li {
+    width: 100%;
+  }
 }
 
 #news .container ul li a {
