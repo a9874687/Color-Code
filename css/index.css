@@ -67,11 +67,13 @@ table {
   position: fixed;
   width: 100%;
   z-index: 100;
+  -webkit-box-shadow: 1px 0px 1px black;
+          box-shadow: 1px 0px 1px black;
 }
 
 @media (max-width: 767px) {
   #header {
-    line-height: 0px;
+    height: 80px;
   }
 }
 
@@ -91,6 +93,12 @@ table {
   margin-top: 20px;
 }
 
+@media (max-width: 767px) {
+  #header .container h1 a {
+    margin-top: 10px;
+  }
+}
+
 #header .container h1 a img {
   width: 100%;
 }
@@ -103,7 +111,7 @@ table {
 
 @media (max-width: 767px) {
   #header .container h1 a img {
-    width: 50%;
+    width: 45%;
   }
 }
 
@@ -115,7 +123,27 @@ table {
 
 @media (max-width: 767px) {
   #header .container ul {
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  #header .container ul li {
+    text-align: center;
+    padding-top: 3%;
+    background-color: white;
+    opacity: 1;
+    z-index: 99;
+    line-height: 80px;
   }
 }
 
@@ -140,16 +168,23 @@ table {
   }
 }
 
+@media (max-width: 767px) {
+  #header .container ul li a {
+    letter-spacing: 0.3em;
+  }
+}
+
 #header .container .menushow {
   display: none;
 }
 
 @media (max-width: 767px) {
   #header .container .menushow {
+    position: absolute;
     right: 0;
     display: block;
-    margin-right: 20px;
-    line-height: 100px;
+    margin-right: 35px;
+    line-height: 80px;
   }
 }
 

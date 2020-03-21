@@ -29,8 +29,9 @@ $font-p:16px;
     position: fixed;
     width: 100%;
     z-index: 100;
+    box-shadow: 1px 0px 1px black;
     @include mobile767(){
-        line-height: 0px;
+        height: 80px;
     }
     .container{
         display: flex;
@@ -41,13 +42,16 @@ $font-p:16px;
             a{
                 display: block;
                 margin-top: 20px;
+                @include mobile767(){
+                    margin-top: 10px;
+                }
                 img{
                     width: 100%;
                     @include pad(){
                         width: 70%;
                     }
                     @include mobile767(){
-                        width: 50%;
+                        width: 45%;
                     }
                 }
             }
@@ -55,9 +59,23 @@ $font-p:16px;
         ul{
             display: flex;
             @include mobile767(){
+                position: absolute;
+                top:80px;
+                bottom: 0;
+                left: 0;
+                right: 0;
                 display: none;
+                flex-direction: column;
             }
             li{
+                @include mobile767(){
+                    text-align: center;
+                    padding-top: 3%;
+                    background-color: white;
+                    opacity: 1;
+                    z-index: 99;
+                    line-height: 80px;
+                 }
                 a{
                     display: block;
                     text-decoration: none;
@@ -73,16 +91,21 @@ $font-p:16px;
                         padding-right: 20px;
                         font-size: 12px;
                     }
+                    @include mobile767(){
+                        letter-spacing: 0.3em;
+                        
+                     }
                 }
             }
         }
         .menushow{
             display: none;
             @include mobile767(){
+                position: absolute;
                 right: 0;
                 display: block;
-                margin-right: 20px;
-                line-height: 100px;
+                margin-right: 35px;
+                line-height: 80px;
             }
             a{
                 text-decoration: none;
@@ -314,30 +337,6 @@ $font-p:16px;
                 }
             }
         }
-        // .more-btn{
-        //     margin-top: 2%;
-        //     margin-bottom: 2%;
-        //     background-color: #FFF;
-        //     border:1px solid rgb(235, 187, 56);
-        //     border-radius: 18px;
-        //     width: 10%;
-        //     line-height: 40px;
-        //     text-align: center;
-        //     @include mobile767(){
-        //         width: 45%;
-        //     }
-        //     span{
-        //         a{
-        //             display: block;
-        //             color: black;
-        //             text-decoration: none;
-        //             &:hover{
-        //                 background-color: rgb(250, 197, 52);
-        //                 border-radius: 50px;
-        //             }
-        //         }
-        //     }
-        // }
     }
 }
 #banner2{
@@ -348,11 +347,6 @@ $font-p:16px;
     margin-bottom: 40px;
     background-image: url("../img/banner2.jpg");
     @include bgc-cover();
-    img{
-        // width: 100%;
-        // height: 350px;
-       
-    }
 }
 //--------------------------門市據點--------------------------//
 #store{
