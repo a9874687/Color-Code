@@ -196,6 +196,8 @@ table {
   font-size: 20px;
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 #product-p .container .product-card {
@@ -310,6 +312,8 @@ table {
   font-size: 20px;
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 #cookie-card .container ul {
@@ -395,10 +399,12 @@ table {
   display: block;
   color: black;
   text-decoration: none;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: bold;
 }
 
 #cookie-card .container .more-btn span a:hover {
-  background-color: #fac534;
+  background-color: #fdd264;
   border-radius: 10px;
 }
 
@@ -426,7 +432,8 @@ table {
   font-size: 20px;
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 #news .container ul {
@@ -495,7 +502,8 @@ table {
   font-size: 20px;
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 #store .container section {
