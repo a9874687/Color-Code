@@ -81,7 +81,6 @@ $font-p:16px;
                     text-decoration: none;
                     padding-right: 25px;
                     font-size: $font-s;
-                    font-weight: bold;
                     font-family: 'Noto Sans TC', sans-serif;
                     color: black;
                     &:hover{
@@ -89,11 +88,11 @@ $font-p:16px;
                     }
                     @include pad(){
                         padding-right: 20px;
-                        font-size: 12px;
+                        font-size: 14px;
                     }
                     @include mobile767(){
                         letter-spacing: 0.3em;
-                        
+                        font-size: 16px;
                      }
                 }
             }
@@ -150,11 +149,11 @@ $font-p:16px;
                 padding: 1%;
                 a{
                     display: block;
+                    overflow: hidden;
                     img{
                         width: 100%;
                         transform: scale(1);
                         transition: all 1s;
-                        overflow: hidden;
                         &:hover{
                             transform: scale(1.2);
                         }
@@ -325,13 +324,13 @@ $font-p:16px;
                 }
                 a{
                     display: block;
+                    overflow: hidden;
                     img{
                         width: 100%;
                         transform: scale(1);
                         transition: all 1s;
-                        overflow: hidden;
                         &:hover{
-                            transform: scale(1.2);
+                            transform: scale(1.1);
                         }
                     }
                 }
@@ -433,8 +432,9 @@ $font-p:16px;
         }
         .footer-right{
             ul{
+                margin-top: 10%;
                 li{
-                    a{
+                    span{
                         display: block;
                         text-decoration: none;
                         color: black;

@@ -152,7 +152,6 @@ table {
   text-decoration: none;
   padding-right: 25px;
   font-size: 16px;
-  font-weight: bold;
   font-family: 'Noto Sans TC', sans-serif;
   color: black;
 }
@@ -164,13 +163,14 @@ table {
 @media (max-width: 768px) {
   #header .container ul li a {
     padding-right: 20px;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 767px) {
   #header .container ul li a {
     letter-spacing: 0.3em;
+    font-size: 16px;
   }
 }
 
@@ -248,6 +248,7 @@ table {
 
 #product-p .container .product-card li a {
   display: block;
+  overflow: hidden;
 }
 
 #product-p .container .product-card li a img {
@@ -256,7 +257,6 @@ table {
           transform: scale(1);
   -webkit-transition: all 1s;
   transition: all 1s;
-  overflow: hidden;
 }
 
 #product-p .container .product-card li a img:hover {
@@ -512,6 +512,7 @@ table {
 
 #news .container ul li a {
   display: block;
+  overflow: hidden;
 }
 
 #news .container ul li a img {
@@ -520,12 +521,11 @@ table {
           transform: scale(1);
   -webkit-transition: all 1s;
   transition: all 1s;
-  overflow: hidden;
 }
 
 #news .container ul li a img:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #banner2 {
@@ -662,7 +662,11 @@ table {
   margin: 0 30px;
 }
 
-#footer .container .footer-right ul li a {
+#footer .container .footer-right ul {
+  margin-top: 10%;
+}
+
+#footer .container .footer-right ul li span {
   display: block;
   text-decoration: none;
   color: black;
@@ -671,7 +675,7 @@ table {
 }
 
 @media (max-width: 767px) {
-  #footer .container .footer-right ul li a {
+  #footer .container .footer-right ul li span {
     font-size: 12px;
     white-space: nowrap;
   }
