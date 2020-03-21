@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="bootstrap-4.2.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
-    
+    <link rel="stylesheet" href="animate.css-master/animate.min.css">
     <title>Color-Code</title>
 </head>
 
@@ -52,7 +52,7 @@
                 <li>
                     <a href="#news" class="scrollTop">
                         <i class="menu-icon">
-                            <i class="fas fa-stroopwafel"></i>
+                            <i class="far fa-newspaper"></i>
                         </i>
                         <span>最新消息</span>
                     </a>
@@ -82,7 +82,7 @@
                - 熱門商品 -
             </h2>
             
-                <ul class="product-card">
+                <ul class="product-card wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1s">
                     <li>
                         <a href="">
                             <img src="img/product-p/product-pic1.jpg" alt="">
@@ -113,7 +113,7 @@
     </div>
     <div id="about">
         <div class="container">
-            <div class="about-pic">
+            <div class="about-pic wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1.1s">
                 <img src="img/about_pic.jpg" alt="關於我們">
             </div>
             <div class="about-artical">
@@ -133,7 +133,7 @@
             <h2>
                - 甜點專區 -
             </h2>
-            <ul>
+            <ul class="wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1.2s">
                 <li>
                     <a href="">
                         <img src="img/cookie/cookie-card1.jpg" alt="">
@@ -172,7 +172,7 @@
             <h2>
                - 最新消息 -
             </h2>
-            <ul>
+            <ul class="wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1.2s">
                 <li>
                     <a href="">
                         <img src="img/news/news-pic1.jpg" alt="最新消息">
@@ -197,7 +197,7 @@
             <h2>
                - 門市據點 -
             </h2>
-            <section>
+            <section class="wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1.2s">
                 <div class="card" style="width: 18rem;">
                     <img src="img/store/store-pic1.jpg" class="card-img-top" alt="師大本店">
                     <div class="card-body">
@@ -306,8 +306,12 @@
         </div>
     </div>
 </body>
-<script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/index.js"></script>
     <script src="slick-1.8.1/slick/slick.min.js"></script>
     <script src="bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+    <script src="WOW-master/dist/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </html>
