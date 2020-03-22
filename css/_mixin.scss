@@ -1,6 +1,6 @@
 @mixin bgc-cover {
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
 }

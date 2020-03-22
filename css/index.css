@@ -209,7 +209,7 @@ table {
 
 @media (max-width: 767px) {
   #banner img {
-    padding-top: 27%;
+    padding-top: 25%;
   }
 }
 
@@ -529,7 +529,6 @@ table {
 }
 
 #banner2 {
-  max-width: 1140px;
   height: 250px;
   margin: 0 auto;
   margin-top: 40px;
@@ -537,7 +536,7 @@ table {
   background-image: url("../img/banner2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
 }
 

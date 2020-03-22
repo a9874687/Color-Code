@@ -122,7 +122,7 @@ $font-p:16px;
     img{
         width: 100%;
         @include mobile767(){
-        padding-top: 27%;
+        padding-top: 25%;
     }
     }
 }
@@ -339,7 +339,6 @@ $font-p:16px;
     }
 }
 #banner2{
-    max-width: 1140px;
     height: 250px;
     margin: 0 auto;
     margin-top: 40px;
