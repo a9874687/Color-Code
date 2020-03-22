@@ -121,7 +121,13 @@ $font-p:16px;
     width: 100%;
     img{
         width: 100%;
-        @include mobile767(){
+        @include mobile480(){
+            padding-top: 19%;
+        }
+        @include mobile360(){
+            padding-top: 22%;
+        }
+        @include iphone5(){
         padding-top: 25%;
     }
     }
