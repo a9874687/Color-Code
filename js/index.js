@@ -6,6 +6,8 @@ $( document ).ready(function() {
     //--------------------------輪播--------------------------//
     $('.product-card').slick({
         centerMode: true,
+        autoplay: true,
+        autoplaySpeed: 1500,
         centerPadding: '40px',
         slidesToShow: 3,
         responsive: [

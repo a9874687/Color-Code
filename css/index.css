@@ -207,7 +207,19 @@ table {
   width: 100%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 480px) {
+  #banner img {
+    padding-top: 19%;
+  }
+}
+
+@media (max-width: 360px) {
+  #banner img {
+    padding-top: 22%;
+  }
+}
+
+@media (max-width: 320px) {
   #banner img {
     padding-top: 25%;
   }
