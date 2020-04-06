@@ -154,10 +154,16 @@ table {
   font-size: 16px;
   font-family: 'Noto Sans TC', sans-serif;
   color: black;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #header .container ul li a:hover {
   color: #ebbb38;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 @media (max-width: 768px) {
@@ -245,6 +251,7 @@ table {
   font-weight: bold;
   margin-top: 40px;
   margin-bottom: 40px;
+  letter-spacing: 0.3em;
 }
 
 #product-p .container .product-card {
@@ -278,7 +285,7 @@ table {
 
 #about {
   position: relative;
-  background-image: url("../img/bg_wood.jpg");
+  background-color: #f5f5f5;
 }
 
 #about .container {
@@ -318,7 +325,8 @@ table {
 
 @media (max-width: 768px) {
   #about .container .about-pic img {
-    width: 41%;
+    width: 40%;
+    top: 10%;
     padding-left: 10px;
   }
 }
@@ -326,7 +334,8 @@ table {
 @media (max-width: 767px) {
   #about .container .about-pic img {
     position: static;
-    padding-top: 20px;
+    padding: 20px;
+    margin: auto;
     width: 100%;
   }
 }
@@ -353,6 +362,7 @@ table {
   max-width: 1140px;
   margin: 0 auto;
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 #cookie-card .container h2 {
@@ -361,6 +371,7 @@ table {
   font-weight: bold;
   margin-top: 40px;
   margin-bottom: 40px;
+  letter-spacing: 0.3em;
 }
 
 #cookie-card .container ul {
@@ -396,11 +407,14 @@ table {
   -webkit-transition: all 1s;
   transition: all 1s;
   overflow: hidden;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  transition: all 1s;
 }
 
 #cookie-card .container ul li a img:hover {
-  -webkit-transform: skew(5deg, 5deg);
-          transform: skew(5deg, 5deg);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 #cookie-card .container .more-btn {
@@ -469,7 +483,9 @@ table {
 }
 
 #news {
-  background-color: #f5f5f5;
+  position: relative;
+  padding: 40px 0;
+  background-image: url("../img/bg_wood.jpg");
 }
 
 #news .container {
@@ -480,30 +496,36 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   max-width: 1140px;
-  margin: 0 auto;
-  margin-top: 40px;
+  margin: auto;
 }
 
-#news .container h2 {
-  font-size: 20px;
+#news .container .news-title {
+  position: relative;
+  padding: 40px 0;
+}
+
+#news .container .news-title h2 {
   font-family: 'Noto Sans TC', sans-serif;
+  font-size: 20px;
   font-weight: bold;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  letter-spacing: 0.3em;
 }
 
-#news .container ul {
+#news .container section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-@media (max-width: 767px) {
-  #news .container ul {
+@media (max-width: 480px) {
+  #news .container section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -511,45 +533,147 @@ table {
   }
 }
 
-#news .container ul li {
-  width: 33.333%;
-  padding: 2%;
+#news .container section .news-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  background: #fff;
+  -webkit-box-shadow: 0px 1px 2px rgba(207, 200, 141, 0.7);
+          box-shadow: 0px 1px 2px rgba(207, 200, 141, 0.7);
+  padding: 20px 20px;
+  margin: 20px;
 }
 
 @media (max-width: 767px) {
-  #news .container ul li {
-    width: 100%;
+  #news .container section .news-info {
+    width: 50%;
+    margin: 10px 10px;
   }
 }
 
-#news .container ul li a {
-  display: block;
-  overflow: hidden;
+@media (max-width: 480px) {
+  #news .container section .news-info {
+    width: 100%;
+    margin: 10px 0px;
+  }
 }
 
-#news .container ul li a img {
+#news .container section .news-info .news-pic {
   width: 100%;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 1s;
-  transition: all 1s;
 }
 
-#news .container ul li a img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+#news .container section .news-info .news-pic img {
+  width: 100%;
+}
+
+#news .container section .news-info .news-content a {
+  display: block;
+  text-decoration: none;
+}
+
+#news .container section .news-info .news-content a h3 {
+  color: #538539;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#news .container section .news-info .news-content p {
+  color: #454545;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+#news .container section .news-info .news-content span {
+  font-size: 13px;
+  margin-top: 8px;
+  color: #878A79;
+}
+
+#news .container .more-btn {
+  margin-top: 5%;
+  background-color: #FFF;
+  border: 1px solid #ebbb38;
+  border-radius: 10px;
+  width: 10%;
+  line-height: 50px;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  #news .container .more-btn {
+    width: 15%;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #news .container .more-btn {
+    width: 15%;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  #news .container .more-btn {
+    width: 20%;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  #news .container .more-btn {
+    width: 28%;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 360px) {
+  #news .container .more-btn {
+    width: 30%;
+    line-height: 33px;
+  }
+}
+
+@media (max-width: 320px) {
+  #news .container .more-btn {
+    width: 40%;
+    line-height: 33px;
+  }
+}
+
+#news .container .more-btn span a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: bold;
+}
+
+#news .container .more-btn span a:hover {
+  background-color: #fdd264;
+  border-radius: 10px;
 }
 
 #banner2 {
-  height: 250px;
-  margin: 0 auto;
   margin-top: 40px;
-  margin-bottom: 40px;
-  background-image: url("../img/banner2.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
+}
+
+#banner2 .container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+#banner2 .container img {
+  width: 100%;
+  height: 400px;
 }
 
 #store {
@@ -578,6 +702,7 @@ table {
   font-weight: bold;
   margin-top: 40px;
   margin-bottom: 40px;
+  letter-spacing: 0.3em;
 }
 
 #store .container section {
@@ -603,10 +728,6 @@ table {
   #store .container section {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
 
